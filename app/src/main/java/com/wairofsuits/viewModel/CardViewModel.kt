@@ -1,8 +1,8 @@
-package com.wairofsuits
+package com.wairofsuits.viewModel
 
 import androidx.lifecycle.MutableLiveData
-import com.warofsuits.Card
-import com.warofsuits.Suit
+import com.wairofsuits.Card
+import com.wairofsuits.Suit
 import kotlin.random.Random
 
 class CardViewModel {
