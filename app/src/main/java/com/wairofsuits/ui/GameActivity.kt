@@ -119,7 +119,7 @@ class GameActivity : AppCompatActivity(){
         Handler(Looper.getMainLooper()).postDelayed({
             checkInstructionsForWinnerRound(whoWinRound)
             waitingTimeToNextRound()
-        }, 1500)
+        }, 1000)
     }
 
     private fun waitingTimeToNextRound() {
@@ -131,7 +131,7 @@ class GameActivity : AppCompatActivity(){
             statusGame.visibility = View.INVISIBLE
             settingsPlayersCard()
             game()
-        }, 2500)
+        }, 2000)
     }
 
     private fun checkInstructionsForWinnerRound(whoWinRound: Int) {
@@ -171,13 +171,13 @@ class GameActivity : AppCompatActivity(){
 
     private fun settingsTotalPlayersCards() {
         totalRegularPilePlayer1.text =
-            viewModel.getCardsPlayer1().filter { it.regularPile }.size.toString()
+            "${viewModel.getCardsPlayer1().filter { it.regularPile }.size} cards"
         totalRegularPilePlayer2.text =
-            viewModel.getCardsPlayer2().filter { it.regularPile }.size.toString()
+            "${viewModel.getCardsPlayer2().filter { it.regularPile }.size} cards"
         totalDiscardPilePlayer1.text =
-            viewModel.getCardsPlayer1().filter { !it.regularPile }.size.toString()
+            "${viewModel.getCardsPlayer1().filter { !it.regularPile }.size} cards"
         totalDiscardPilePlayer2.text =
-            viewModel.getCardsPlayer2().filter { !it.regularPile }.size.toString()
+            "${viewModel.getCardsPlayer2().filter { !it.regularPile }.size} cards"
     }
 
     private fun actionResetButton() {
