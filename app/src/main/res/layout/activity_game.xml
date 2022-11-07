@@ -29,10 +29,11 @@
 
         <TextView
             android:id="@+id/activity_game_text_discard_pile_player1"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="@string/discard_pile"
             android:textSize="20sp"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/activity_game_text_player1"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,10 +42,11 @@
 
         <TextView
             android:id="@+id/activity_game_text_regular_pile_player1"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="@string/regular_pile"
             android:textSize="20sp"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/activity_game_text_player1"
@@ -66,7 +68,7 @@
 
         <TextView
             android:id="@+id/activity_game_text_discard_pile_player2"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/discard_pile"
@@ -79,7 +81,7 @@
 
         <TextView
             android:id="@+id/activity_game_text_regular_pile_player2"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/regular_pile"
@@ -434,7 +436,7 @@
             android:background="#E2EFFF1A"
             android:gravity="center"
             android:textColor="#FF0707"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/activity_game_text_discard_pile_player2"

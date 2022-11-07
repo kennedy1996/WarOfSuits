@@ -85,7 +85,7 @@ class GameActivity : AppCompatActivity(){
 
     private fun instructionsOnPlayer1Turn() {
         instructionsPlayer1.visibility = View.VISIBLE
-        instructionsPlayer1.text = "YOUR TURN!\nCLICK HERE TO LAY DOWN A CARD"
+        instructionsPlayer1.text = getString(R.string.instruction_player_turn)
         roundStatus.visibility=View.VISIBLE
         roundStatus.text=viewModel.getRoundStatus()
         instructionsPlayer1.setOnClickListener {
@@ -101,7 +101,7 @@ class GameActivity : AppCompatActivity(){
 
     private fun instructionsPlayer2Turn() {
         instructionsPlayer2.visibility = View.VISIBLE
-        instructionsPlayer2.text = R.string.instruction_player_turn.toString()
+        instructionsPlayer2.text = getString(R.string.instruction_player_turn)
         instructionsPlayer2.setOnClickListener {
             player2RoundCard = viewModel.getRandomCardPlayer2()
             cardNumberPlayer2.text = checkCardName(player2RoundCard!!.card)
