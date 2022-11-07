@@ -6,4 +6,488 @@
     android:layout_height="match_parent"
     tools:context=".GameActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/activity_game_button_reset_game"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/activity_game_text_player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PLAYER 1"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.75" />
+
+        <TextView
+            android:id="@+id/activity_game_text_discard_pile_player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discard Pile"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/activity_game_text_player1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_text_player1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/activity_game_text_regular_pile_player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regular Pile"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/activity_game_text_player1"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_text_player1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/activity_game_text_player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PLAYER 2"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25" />
+
+        <TextView
+            android:id="@+id/activity_game_text_discard_pile_player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Discard Pile"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/activity_game_text_player2"
+            app:layout_constraintEnd_toStartOf="@+id/activity_game_text_player2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/activity_game_text_regular_pile_player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Regular Pile"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/activity_game_text_player2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/activity_game_text_player2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/activity_game_text_suit_priority"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="suit priority\n lower to higher"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/activity_game_text_player1"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_image_suit_power_4"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_image_suit_power_1"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_text_player2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/activity_game_image_suit_power_1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="#FFFFFF"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_text_regular_pile_player2"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_text_suit_priority"
+            app:srcCompat="@drawable/suit_clubs" />
+
+        <ImageView
+            android:id="@+id/activity_game_image_suit_power_2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:background="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/activity_game_image_suit_power_1"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_text_suit_priority"
+            app:srcCompat="@drawable/suit_clubs" />
+
+        <ImageView
+            android:id="@+id/activity_game_image_suit_power_3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:background="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/activity_game_image_suit_power_2"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_text_suit_priority"
+            app:srcCompat="@drawable/suit_clubs" />
+
+        <ImageView
+            android:id="@+id/activity_game_image_suit_power_4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_text_regular_pile_player2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/activity_game_image_suit_power_3"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_text_suit_priority"
+            app:srcCompat="@drawable/suit_clubs" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/activity_game_round_cardView_player1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            app:cardBackgroundColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_game_round_cardView_player2"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_text_discard_pile_player1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_text_discard_pile_player1"
+            app:layout_constraintTop_toTopOf="@+id/activity_game_round_cardView_player2"
+            tools:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity_game_round_card_player1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/activity_game_round_card_number_player1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:text="2"
+                    android:textColor="#000000"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/activity_game_round_card_suit_player1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/activity_game_round_card_text_player1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_game_round_card_number_player1"
+                    app:srcCompat="@drawable/suit_clubs" />
+
+                <TextView
+                    android:id="@+id/activity_game_round_card_text_player1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="PLAYER 1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/activity_game_round_cardView_player2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="invisible"
+            app:cardBackgroundColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/activity_game_text_player1"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_text_regular_pile_player1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_text_regular_pile_player1"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_image_suit_power_1"
+            app:layout_constraintVertical_bias="0.5"
+            tools:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/activity_game_round_card_number_player2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:text="2"
+                    android:textColor="#000000"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/activity_game_round_card_suit_player2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/activity_game_round_card_text_player2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_game_round_card_number_player2"
+                    app:srcCompat="@drawable/suit_clubs" />
+
+                <TextView
+                    android:id="@+id/activity_game_round_card_text_player2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="PLAYER 2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/activity_game_discard_pile_total_cards_player1"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_discard_pile_total_cards_player1"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_discard_pile_total_cards_player1"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_text_discard_pile_player1">
+
+            <TextView
+                android:id="@+id/activity_game_discard_pile_cards_player1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@+id/activity_game_discard_pile_total_cards_player1"
+                app:layout_constraintEnd_toEndOf="@+id/activity_game_text_discard_pile_player1"
+                app:layout_constraintStart_toStartOf="@+id/activity_game_text_discard_pile_player1"
+                app:layout_constraintTop_toBottomOf="@+id/activity_game_text_discard_pile_player1"
+                tools:text="2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, " />
+        </ScrollView>
+        <TextView
+            android:id="@+id/activity_game_discard_pile_total_cards_player1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_text_discard_pile_player1"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_text_discard_pile_player1"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_text_discard_pile_player1"
+            app:layout_constraintVertical_bias="1.0"
+            tools:text="10 cards" />
+
+        <TextView
+            android:id="@+id/activity_game_regular_pile_total_cards_player1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_text_regular_pile_player1"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_text_regular_pile_player1"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_text_regular_pile_player1"
+            app:layout_constraintVertical_bias="1.0"
+            tools:text="10 cards" />
+
+
+        <TextView
+            android:id="@+id/activity_game_regular_pile_total_cards_player2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/activity_game_text_regular_pile_player2"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_text_regular_pile_player2"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_text_regular_pile_player2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="10 cards" />
+
+        <TextView
+            android:id="@+id/activity_game_discard_pile_total_cards_player2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/activity_game_text_regular_pile_player2"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_text_discard_pile_player2"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_text_discard_pile_player2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="10 cards" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/activity_game_text_discard_pile_player2"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_text_discard_pile_player2"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_text_discard_pile_player2"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_discard_pile_total_cards_player2">
+
+
+            <TextView
+                android:id="@+id/activity_game_discard_pile_cards_player2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@+id/activity_game_text_discard_pile_player2"
+                app:layout_constraintEnd_toEndOf="@+id/activity_game_text_discard_pile_player2"
+                app:layout_constraintStart_toStartOf="@+id/activity_game_text_discard_pile_player2"
+                app:layout_constraintTop_toBottomOf="@+id/activity_game_regular_pile_total_cards_player2"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, " />
+        </ScrollView>
+        <ImageView
+            android:id="@+id/activity_game_image_cards_player1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/activity_game_regular_pile_total_cards_player1"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_text_regular_pile_player1"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_text_regular_pile_player1"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_text_regular_pile_player1"
+            app:srcCompat="@drawable/deck_cards" />
+
+        <ImageView
+            android:id="@+id/activity_game_image_cards_player2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/activity_game_text_regular_pile_player2"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_text_regular_pile_player2"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_text_regular_pile_player2"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_regular_pile_total_cards_player2"
+            app:srcCompat="@drawable/deck_cards" />
+
+        <TextView
+            android:id="@+id/activity_game_round_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="round\n1"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_text_player2"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_text_player2"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_text_player2"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/activity_game_instructions_player1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="#E2EFFF1A"
+            android:gravity="center"
+            android:textColor="#FF0707"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_game_discard_pile_total_cards_player1"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_text_player1"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_text_player1"
+            app:layout_constraintTop_toTopOf="@+id/activity_game_text_discard_pile_player1"
+            tools:text="YOUR TURN!\nCLICK HERE TO TAKE A CARD"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/activity_game_instructions_player2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#E2EFFF1A"
+            android:gravity="center"
+            android:textColor="#FF0707"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_game_text_discard_pile_player2"
+            app:layout_constraintEnd_toEndOf="@+id/activity_game_text_player2"
+            app:layout_constraintStart_toStartOf="@+id/activity_game_instructions_player1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="YOUR TURN!\nCLICK HERE TO TAKE A CARD"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/activity_game_image_start_game"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/activity_game_text_player1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_text_player2"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/activity_game_status_game"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#FFEB3B"
+            android:gravity="center"
+            android:text="PLAYER 1\nWON A ROUND"
+            android:textColor="#0C0505"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/activity_game_text_player1"
+            app:layout_constraintEnd_toStartOf="@+id/activity_game_round_cardView_player2"
+            app:layout_constraintStart_toEndOf="@+id/activity_game_round_cardView_player1"
+            app:layout_constraintTop_toBottomOf="@+id/activity_game_round_number"
+            tools:visibility="visible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/activity_game_button_reset_game"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="RESET GAME"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
