@@ -2,6 +2,7 @@ package com.wairofsuits.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import com.wairofsuits.Card
+import com.wairofsuits.R
 import com.wairofsuits.Suit
 import kotlin.random.Random
 
@@ -173,11 +174,11 @@ class CardViewModel {
             }else "0"
         }else{
             if(cardsDiscardsPlayer1>cardsDiscardsPlayer2){
-                "Player 1\nWIN THE GAME"
+                "${R.string.player1}\n${R.string.win_game}"
             }else if(cardsDiscardsPlayer2>cardsDiscardsPlayer1){
-                "Player 2\nWIN THE GAME"
+                "${R.string.player2}\n${R.string.win_game}"
             }else if(cardsDiscardsPlayer1==cardsDiscardsPlayer2){
-                "TIE GAME"
+                R.string.tie.toString()
             }else  {
                 "UNKNOWN"
             }

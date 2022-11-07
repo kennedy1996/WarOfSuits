@@ -1,3 +1,22 @@
 <resources>
-    <string name="app_name">WairOfSuits</string>
+    <string name="app_name" translatable="false">WarOfSuits</string>
+    <string name="cards">cartas</string>
+    <string name="welcome">Bem-Vindo a</string>
+    <string name="start_game">INICIAR JOGO</string>
+    <string name="player1">Jogador 1</string>
+    <string name="player2">Jogador 2</string>
+    <string name="round">rodada</string>
+    <string name="instruction_player_turn">Sua vez!\nClique aqui para virar a carta</string>
+    <string name="discard_pile">Descarte</string>
+    <string name="regular_pile">Monte</string>
+    <string name="suit_priority_instruction">ordem nipe\nfraco->forte</string>
+    <string name="reset_game">INICIAR NOVO JOGO</string>
+    <string name="win_round">VENCEU A RODADA</string>
+    <string name="tie">EMPATE</string>
+    <string name="win_game">VENCEU O JOGO</string>
+    <string name="suit_hearts">COPAS</string>
+    <string name="suit_clubs">ZAP</string>
+    <string name="suit_spades">ESPADAS</string>
+    <string name="suit_diamonds">OUROS</string>
+
 </resources>

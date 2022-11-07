@@ -101,7 +101,7 @@ class GameActivity : AppCompatActivity(){
 
     private fun instructionsPlayer2Turn() {
         instructionsPlayer2.visibility = View.VISIBLE
-        instructionsPlayer2.text = "YOUR TURN!\nCLICK HERE TO LAY DOWN A CARD"
+        instructionsPlayer2.text = R.string.instruction_player_turn.toString()
         instructionsPlayer2.setOnClickListener {
             player2RoundCard = viewModel.getRandomCardPlayer2()
             cardNumberPlayer2.text = checkCardName(player2RoundCard!!.card)
@@ -139,16 +139,16 @@ class GameActivity : AppCompatActivity(){
             cardViewPlayer1.setBackgroundColor(Color.parseColor("#A102F670"))
             cardViewPlayer2.setBackgroundColor(Color.parseColor("#7CF60000"))
             statusGame.visibility = View.VISIBLE
-            statusGame.text = "PLAYER 1\nWIN THE ROUND!"
+            statusGame.text = "${getString(R.string.player1)}\n${getString(R.string.win_round)}"
 
 
-        } else if (whoWinRound == 2) {
-            cardViewPlayer2.setBackgroundColor(Color.parseColor("#A102F670"))
-            cardViewPlayer1.setBackgroundColor(Color.parseColor("#7CF60000"))
-            statusGame.visibility = View.VISIBLE
-            statusGame.text = "PLAYER 2\nWIN THE ROUND!"
-        }
-    }
+                } else if (whoWinRound == 2) {
+                    cardViewPlayer2.setBackgroundColor(Color.parseColor("#A102F670"))
+                    cardViewPlayer1.setBackgroundColor(Color.parseColor("#7CF60000"))
+                    statusGame.visibility = View.VISIBLE
+                    statusGame.text = "${getString(R.string.player2)}\n${getString(R.string.win_round)}"
+                        }
+                        }
 
     private fun settingsShowPlayersCard() {
         var discardPileCardsPlayer1 = ""
@@ -171,14 +171,14 @@ class GameActivity : AppCompatActivity(){
 
     private fun settingsTotalPlayersCards() {
         totalRegularPilePlayer1.text =
-            "${viewModel.getCardsPlayer1().filter { it.regularPile }.size} cards"
+            "${viewModel.getCardsPlayer1().filter { it.regularPile }.size} ${getString(R.string.cards)}"
         totalRegularPilePlayer2.text =
-            "${viewModel.getCardsPlayer2().filter { it.regularPile }.size} cards"
-        totalDiscardPilePlayer1.text =
-            "${viewModel.getCardsPlayer1().filter { !it.regularPile }.size} cards"
-        totalDiscardPilePlayer2.text =
-            "${viewModel.getCardsPlayer2().filter { !it.regularPile }.size} cards"
-    }
+            "${viewModel.getCardsPlayer2().filter { it.regularPile }.size} ${getString(R.string.cards)}"
+                totalDiscardPilePlayer1.text =
+                    "${viewModel.getCardsPlayer1().filter { !it.regularPile }.size} ${getString(R.string.cards)}"
+                        totalDiscardPilePlayer2.text =
+                            "${viewModel.getCardsPlayer2().filter { !it.regularPile }.size} ${getString(R.string.cards)}"
+                                }
 
     private fun actionResetButton() {
         val resetButton = findViewById<Button>(R.id.activity_game_button_reset_game)
@@ -243,13 +243,13 @@ class GameActivity : AppCompatActivity(){
     }
     private fun checkSuitName(suit: Int): String {
         return when (suit) {
-            SUIT_CLUBS -> "Clubs"
-            CARD_DIAMONDS -> "Diamond"
-            CARD_HEARTS -> "Hearts"
-            CARD_SPADES -> "Spades"
-            else -> "?"
-        }
-    }
+            SUIT_CLUBS -> "${getString(R.string.suit_clubs)}"
+                CARD_DIAMONDS -> "${getString(R.string.suit_diamonds)}"
+                    CARD_HEARTS -> "${getString(R.string.suit_hearts)}"
+                        CARD_SPADES -> "${getString(R.string.suit_spades)}"
+                            else -> "?"
+                            }
+                            }
 
     private fun showAnimationStartGame() {
         statusGame.visibility=View.INVISIBLE

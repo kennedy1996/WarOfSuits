@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cards">carta</string>
+    <string name="start_game">NUEVO JUEGO</string>
+    <string name="welcome">BIENVENIDO A</string>
+    <string name="player1">JOGADOR 1</string>
+    <string name="player2">JOGADOR 2</string>
+    <string name="round">PARTIDA</string>
+    <string name="instruction_player_turn">SU VEZ</string>
+    <string name="discard_pile">BASURA</string>
+    <string name="regular_pile">PILLA</string>
+    <string name="suit_priority_instruction">NIPE</string>
+    <string name="reset_game">EMPEZAR NUEVO JUEGO</string>
+    <string name="win_round">GANASTE LA RODADA</string>
+    <string name="tie">EMPATASTE</string>
+    <string name="win_game">VENCISTE EL JUEGO</string>
+    <string name="suit_hearts">COPASD</string>
+    <string name="suit_clubs">ZAPID</string>
+    <string name="suit_spades">ESPAD</string>
+    <string name="suit_diamonds">ORO</string>
+</resources>
