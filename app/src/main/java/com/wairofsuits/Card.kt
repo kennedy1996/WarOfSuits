@@ -1,4 +1,4 @@
-package com.warofsuits
+package com.wairofsuits
 
 data class Card(
     val card: Int,
