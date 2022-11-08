@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="cards">carta</string>
-    <string name="start_game">NUEVO JUEGO</string>
-    <string name="welcome">BIENVENIDO A</string>
-    <string name="player1">JOGADOR 1</string>
-    <string name="player2">JOGADOR 2</string>
-    <string name="round">PARTIDA</string>
-    <string name="instruction_player_turn">SU VEZ</string>
-    <string name="discard_pile">BASURA</string>
-    <string name="regular_pile">PILLA</string>
-    <string name="suit_priority_instruction">NIPE</string>
-    <string name="reset_game">EMPEZAR NUEVO JUEGO</string>
-    <string name="win_round">GANASTE LA RODADA</string>
-    <string name="tie">EMPATASTE</string>
-    <string name="win_game">VENCISTE EL JUEGO</string>
-    <string name="suit_hearts">COPASD</string>
-    <string name="suit_clubs">ZAPID</string>
-    <string name="suit_spades">ESPAD</string>
-    <string name="suit_diamonds">ORO</string>
+    <string name="app_name" translatable="false">WarOfSuits</string>
+    <string name="cards">barajas</string>
+    <string name="welcome">Bienvenido a</string>
+    <string name="start_game">EMPEZAR JUEGO</string>
+    <string name="player1">Jugador 1</string>
+    <string name="player2">Jugador 2</string>
+    <string name="round">ronda</string>
+    <string name="instruction_player_turn">Su TURNO!\nHacer clic para robar la carta</string>
+    <string name="discard_pile">Descarte</string>
+    <string name="regular_pile">Mazo</string>
+    <string name="suit_priority_instruction">ordem \nflaco->fuerte</string>
+    <string name="reset_game">INICIAR NOVO JOGO</string>
+    <string name="win_round">GANASTE LA RONDA</string>
+    <string name="tie">EMPATE</string>
+    <string name="win_game">GANASTE LA PARTIA</string>
+    <string name="suit_hearts">CORAZONES</string>
+    <string name="suit_clubs">TRÉBOLES</string>
+    <string name="suit_spades">picos</string>
+    <string name="suit_diamonds">OROS</string>
+
 </resources>
